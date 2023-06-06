@@ -403,7 +403,6 @@
                 </a>
               </div>
             </div>
-
             <div>
               <p class="social-text">Subscribe to the newsletter</p>
               <form
@@ -414,12 +413,11 @@
               >
                 <label for=""
                   ><input
+                    class="email-box"
                     type="email"
                     name="email"
-                    id="email"
                     placeholder="E-mail"
                     required
-                    class="email-box"
                 /></label>
                 <button class="submit-btn" type="submit">
                   <span class="subscribe"
@@ -447,50 +445,76 @@
         </button>
         <div>
           <form class="modal-form" action="">
-            <fieldset class="modal-group">
-              <legend class="modal-title">
-                Leave your information and we'll call you back
-              </legend>
-              <label class="form-label"
+            <legend class="modal-title">
+              Leave your information and we'll call you back
+            </legend>
+            <label class="form-label"
+              ><span
                 >Name
-                <input class="form-input" type="text" name="name" required
-              /></label>
-              <label class="form-label"
-                >Telephone<input
-                  class="form-input"
-                  type="tel"
-                  name="phone-number"
-                  required
-              /></label>
-              <label class="form-label"
-                >E-mail
-                <input class="form-input" type="email" name="email" required />
-              </label>
-              <label class="form-label" for="comments"
-                >Comments
-                <textarea
-                  name="comments"
-                  id="comments"
-                  rows="8"
-                  ;
-                  placeholder="Enter the text"
-                ></textarea>
-              </label>
-              <div class="terms-check">
-                <label class="check-box"
-                  ><input type="checkbox" name="terms-and-conditions" required
-                /></label>
-                <p>
-                  I agree with the letter and accept the
-                  <a
-                    href="https://www.freecodecamp.org/news/terms-of-service/
+                <svg class="input-icons">
+                  <use
+                    href="./images/symbol-defs.svg#icon-modal-person"
+                  ></use></svg></span
+              ><svg class="input-icons">
+                <use
+                  href="./images/symbol-defs.svg#icon-modal-person"
+                ></use></svg
+              ><input class="form-input" type="text" name="name" required />
+              <svg class="input-icons">
+                <use
+                  href="./images/symbol-defs.svg#icon-modal-person"
+                ></use></svg
+            ></label>
+
+            <label class="form-label"
+              ><span>Telephone</span
+              ><input
+                class="form-input"
+                type="tel"
+                name="phone-number"
+                required /><svg class="input-icons">
+                <use
+                  href="./images/symbol-defs.svg#icon-modal-phone"
+                ></use></svg
+            ></label>
+            <label class="form-label"
+              ><span>E-mail</span>
+              <input class="form-input" type="email" name="email" required />
+              <svg class="input-icons">
+                <use href="./images/symbol-defs.svg#icon-modal-email"></use>
+              </svg>
+            </label>
+            <label class="form-label" for="comments"
+              ><span>Comments</span>
+              <textarea
+                name="comments"
+                id="comments"
+                placeholder="Enter the text"
+              ></textarea>
+            </label>
+            <div class="terms-check">
+              <label class="agree-check"
+                ><input
+                  class="checkbox"
+                  type="checkbox"
+                  name="terms-and-conditions"
+                  value="agree"
+                  required /><svg class="icon" width="16" height="16">
+                  <use href="./images/symbol-defs.svg#icon-check"></use></svg
+              ></label>
+              <p>
+                I agree with the letter and accept the
+                <a
+                  href="https://www.freecodecamp.org/news/terms-of-service/
 "
-                  >
-                    Terms and Conditions</a
-                  >
-                </p>
-              </div>
-            </fieldset>
+                >
+                  Terms and Conditions</a
+                >
+              </p>
+            </div>
+            <div class="send-btn-section">
+              <button class="send-btn" type="submit">Send</button>
+            </div>
           </form>
         </div>
       </div>

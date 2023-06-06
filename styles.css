@@ -260,10 +260,10 @@ ul {
 }
 
 /* Footer */
+
 .footer {
   width: inherit;
   background-color: #2f303a;
-  width: 1600px;
 }
 .footer-text {
   font-style: normal;
@@ -506,7 +506,6 @@ a:focus {
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-top: 16px;
   padding-bottom: 30px;
 }
 .icons-list > a {
@@ -690,8 +689,6 @@ a:focus {
 }
 
 .modal {
-  height: 581px;
-  width: 528px;
   border-radius: 4px;
   background-color: rgba(255, 255, 255, 1);
   display: flex;
@@ -706,6 +703,8 @@ a:focus {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  width: 528px;
+  height: 581px;
 }
 
 .is-hidden .modal {
@@ -843,11 +842,11 @@ a.active {
 .submit-btn {
   width: 200px;
   height: 50px;
-
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 0;
+  border: none;
 }
 
 .subscribe {
@@ -876,13 +875,8 @@ a.active {
   gap: 12px;
 }
 
-.modal-group {
-  border: none;
-  display: grid;
-  gap: 10px;
-}
-
 .form-label {
+  position: relative;
   display: grid;
   font-family: "Roboto";
   font-style: normal;
@@ -892,12 +886,25 @@ a.active {
   /* identical to box height */
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 4px;
+  margin-bottom: 10px;
   gap: 4px;
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 12px 16px;
+  padding-left: 40px;
 }
 
 .modal {
   justify-content: center;
+  width: 528px;
+  height: 581px;
+}
+
+.modal-group {
+  padding: 0;
 }
 
 .modal-title {
@@ -910,15 +917,7 @@ a.active {
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
-
   color: #212121;
-}
-
-.form-input {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
 }
 
 textarea {
@@ -934,6 +933,7 @@ textarea {
   padding: 12px 16px;
   width: 416px;
   height: 96px;
+  resize: none;
 }
 
 .terms-check {
@@ -947,4 +947,82 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+  height: 28px;
+}
+
+.terms-check > p > a {
+  color: #2196f3;
+}
+
+.send-btn {
+  width: 200px;
+  height: 50px;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: #fff;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  border: none;
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background-color: #188ce8;
+}
+
+.send-btn-section {
+  justify-content: center;
+  display: flex;
+  margin-top: 25px;
+}
+
+.modal-form .input-icons {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  color: #212121;
+  top: 50%;
+  left: 12px;
+}
+
+.form-label input:hover,
+.form-label input:focus {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.form-input:focus-visible {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+[data-modal-close]:hover {
+  background-color: #fff;
+  color: #2196f3;
+}
+
+textarea:hover {
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+textarea:focus-visible {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.email-box:focus-visible {
+  outline: none;
+}
+
+.checkbox {
+  appearance: none;
 }
