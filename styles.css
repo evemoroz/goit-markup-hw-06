@@ -506,6 +506,7 @@ a:focus {
   display: flex;
   justify-content: center;
   gap: 10px;
+  padding-top: 16px;
   padding-bottom: 30px;
 }
 .icons-list > a {
@@ -951,7 +952,7 @@ textarea {
   height: 28px;
 }
 
-.terms-check > p > a {
+.terms-check > span > a {
   color: #2196f3;
 }
 
@@ -997,12 +998,6 @@ textarea {
   border-radius: 4px;
 }
 
-.form-input:focus-visible {
-  outline: none;
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-}
-
 [data-modal-close]:hover {
   background-color: #fff;
   color: #2196f3;
@@ -1011,6 +1006,8 @@ textarea {
 textarea:hover {
   border: 1px solid #2196f3;
   border-radius: 4px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 }
 
 textarea:focus-visible {
@@ -1025,4 +1022,61 @@ textarea:focus-visible {
 
 .checkbox {
   appearance: none;
+}
+
+.service-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.agree-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.agree-check .checkmark {
+  appearance: none;
+}
+
+.agree-check .check-icon {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: white;
+}
+
+.checkmark:checked + .check-icon {
+  background-color: #2196f3;
+  border-color: #2196f3;
+  fill: #ffffff;
+  outline: none;
+  stroke: white;
+  stroke-width: 0.2;
+  color: #2196f3;
+}
+
+.check-icon:hover,
+.check-icon:focus {
+  cursor: pointer;
+}
+
+.form-input:hover + svg {
+  color: #2196f3;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.form-input:focus-visible {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+.form-input:focus-visible + svg {
+  color: #2196f3;
 }

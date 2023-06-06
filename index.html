@@ -492,17 +492,17 @@
                 placeholder="Enter the text"
               ></textarea>
             </label>
-            <div class="terms-check">
-              <label class="agree-check"
-                ><input
-                  class="checkbox"
-                  type="checkbox"
-                  name="terms-and-conditions"
-                  value="agree"
-                  required /><svg class="icon" width="16" height="16">
-                  <use href="./images/symbol-defs.svg#icon-check"></use></svg
-              ></label>
-              <p>
+            <label class="terms-check agree-check"
+              ><input
+                class="checkmark"
+                type="checkbox"
+                name="terms-and-conditions"
+                value="agree"
+                required
+              /><svg class="check-icon" width="16" height="16">
+                <use href="./images/symbol-defs.svg#icon-check"></use>
+              </svg>
+              <span>
                 I agree with the letter and accept the
                 <a
                   href="https://www.freecodecamp.org/news/terms-of-service/
@@ -510,8 +510,8 @@
                 >
                   Terms and Conditions</a
                 >
-              </p>
-            </div>
+              </span>
+            </label>
             <div class="send-btn-section">
               <button class="send-btn" type="submit">Send</button>
             </div>
